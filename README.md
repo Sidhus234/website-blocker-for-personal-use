@@ -8,7 +8,11 @@ We will open this file using Python and add websites to be blocked. For example 
 
 Host file can only be modified by administrator of the PC. Hence, we need to open the windows terminal as admin to run this file.
 
-<h2><a id="schedulepythonscript">Scheduling Python Script as Admin</a></h2>
+<h2><a id="index">Index</a></h2><br>
+[1. Scheduling Python Script as Admin on Windows Machine](#schedulepythonscript)<br>
+[2. Scheduling Python Script on Linux/Mac OS](#schedulescriptlinux)
+
+<h2><a id="schedulepythonscript">1. Scheduling Python Script as Admin on Windows Machine</a></h2>
 <ol>
 <li>Change the python extension to .pyw instead of .py (this will allow the python file to run in the background).</li>
 <li>Open Task Scheduler and Create a new task. Task Name: "Website Blocker".</li>
@@ -18,4 +22,12 @@ Host file can only be modified by administrator of the PC. Hence, we need to ope
 <li>Then click on "Actions" and "New". Action would be "Start a Program". Browse and select the python script. </li>
 <li>Go to "Conditions" and uncheck the option under "Power", "Start the task only if the computer is on AC Power". We want our program to run even when we are on battery.</li>
 <li>After all above settings, click "Ok".</li>
+</ol>
+
+<h2><a id="schedulescriptlinux">2. Scheduling Python Script on Linux/Mac OS</a></h2>
+<ol>
+<li>Open Terminal, launch Visual Studio and change host path to "/etc/hosts"</li>
+<li>Type command "sudo python3 website_blocker.py" and click Enter. The program should work.</li>
+<li>Open crontab using command "sudo crontab -e" in terminal.</li>
+<li>Add this line "@reboot python3 {filepath}/website_blocker.py" to the crontab.</li>
 </ol>
