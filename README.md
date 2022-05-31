@@ -8,9 +8,10 @@ We will open this file using Python and add websites to be blocked. For example 
 
 Host file can only be modified by administrator of the PC. Hence, we need to open the windows terminal as admin to run this file.
 
-<h2><a id="index">Index</a></h2><br>
+<h2><a id="index">Index</a></h2>
+
 [1. Scheduling Python Script as Admin on Windows Machine](#schedulepythonscript)<br>
-[2. Scheduling Python Script on Linux/Mac OS](#schedulescriptlinux)
+[2. Scheduling Python Script on Linux/Mac OS](#schedulescriptlinux)<br>
 
 <h2><a id="schedulepythonscript">1. Scheduling Python Script as Admin on Windows Machine</a></h2>
 <ol>
